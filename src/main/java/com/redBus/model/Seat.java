@@ -40,7 +40,7 @@ public class Seat {
     @JoinColumn(name = "bus_id")
     private Bus bus;
 
-    protected Seat() {
+    public Seat() {
     }
 
     public boolean isAvailable() {

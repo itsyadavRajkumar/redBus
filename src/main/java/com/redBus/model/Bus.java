@@ -12,9 +12,11 @@ import java.util.List;
 @Setter
 public class Bus {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @NotBlank(message = "busNumber is required")
     private String busNumber;
+    private int totalSeats;
     @OneToMany(mappedBy = "bus", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<Seat> seat;
+    private List<Seat> seats;
 }
